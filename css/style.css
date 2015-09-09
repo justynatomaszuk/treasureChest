@@ -1,0 +1,269 @@
+
+*{
+  box-sizing: border-box;
+}
+
+.works {
+  margin-top: 20px;
+}
+.four {
+  min-width: 33.333333%!important;
+}
+
+.row > .four.columns {
+  position: relative;
+  overflow: hidden;
+}
+
+.works > div figure img {
+  max-width: 100%;
+  display: block;
+}
+
+.works figcaption {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  padding: 8%;
+  background-color: rgba(68,58,58,.7);
+
+
+  transform: translateY(-100%);
+  transition: all 350ms;
+}
+
+ .works figure:hover figcaption {
+  transform: translateY(0) scale(0.9);
+}
+
+.works figcaption h4 {
+  margin-bottom: 5px;
+  font-size: 1.4em;
+  color: #F9F5F0;
+}
+
+.works figcaption p {
+  color: #F9F5F0;
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+.works div, .works figure {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Roboto", Aria, sans-serif;
+  font-weight: bold;
+}
+
+header {
+  padding: 22px 0;
+  background-color: #897C6E;
+  margin-bottom: 14px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.logo {
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 0;
+  margin: 0 auto;
+}
+
+.logo h1 {
+  color: white;
+  font-weight: normal;
+  font-family: Roboto, Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+main .item {
+  display: none;
+}
+
+label {
+  padding: 15px 10px;
+  color: #260C0C;
+  cursor: pointer;
+  display: inline-block;
+}
+
+main .item:checked + label {
+    color: #fff;
+    background-color: rgba(41,30,30,0.74);
+    border-radius: 2px;
+}
+
+.row > .columns figure {
+  display: none;
+}
+
+#all:checked ~ .works .all,
+#bags:checked ~ .works .bags,
+#pillows:checked ~ .works .pillows,
+#things:checked ~ .works .things,
+#decorations:checked ~ .works .decorations {
+  display: block;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  margin-top: 28px;
+  padding: 28px 0;
+}
+
+.social {
+  float: left;
+  }
+
+.social ul li {
+  display: inline-block;
+}
+
+.social ul li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sprite_social a{
+    background-image: url("../images/social/social.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-facebook a {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -5px;
+}
+
+.sprite-facebook a:hover {
+    width: 48px;
+    height: 48px;
+    background-position: -63px -5px;
+}
+
+.sprite-gplus a {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -63px;
+}
+
+.sprite-gplus a:hover {
+    width: 48px;
+    height: 48px;
+    background-position: -64px -63px;
+}
+
+.sprite-twitter a {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -5px;
+}
+
+.sprite-twitter a:hover {
+    width: 48px;
+    height: 48px;
+    background-position: -121px -63px;
+}
+
+.contact {
+  float: right;
+}
+
+.contact, .contact a {
+  color: #ccc;
+}
+
+.contact ul li:before {
+  content: '';
+  display: inline-block;
+  width: 24;
+  height: 24;
+  background-image: url("../images/contact/contact.png");
+  margin-right: 0.1em;
+}
+
+.contact li {
+  list-style: none;
+}
+
+.contact-email:before {
+    width: 24px;
+    height: 24px;
+    background-position: -5px 2px;
+}
+
+.contact-name:before {
+    width: 24px;
+    height: 24px;
+    background-position: -39px 2px;
+}
+
+.contact-phone:before {
+    width: 24px;
+    height: 24px;
+    background-position: -5px -33px;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  .works {
+    width: 100%;
+  }
+
+  label {
+    display: none;
+  }
+
+  .four.columns > figure:before {
+		content: attr(data-category);
+		font-size: 1.1em;
+		padding: 10px;
+		width: 100%;
+		color: #fff;
+    text-align: center;
+		display: block;
+		font-weight: bold;
+		text-transform: capitalize;
+		background-color: rgba(41,30,30,0.54);
+		position: absolute;
+	}
+
+   .all figcaption {
+    position: relative;
+    transform: translateY(0%);
+  }
+
+  .works .row div:nth-child(odd) {
+    background-color: #000!important;
+  }
+
+  .footer {
+    border-top: 1px solid #ccc;
+    margin-top: 32px;
+    padding: 10px;
+  }
+
+  .works figure:hover figcaption {
+   transform: translateY(0) scale(1);
+ }
+
+}
